@@ -10,7 +10,7 @@ pipeline{
             steps {
                 withDockerRegistry(credentialsId: 'DockerHub', url: 'https://index.docker.io/v1/') {
                     sh 'docker build -t trieuvu/nodejs .'
-                    sh 'docker push -t trieuvu/nodejs .'
+                    sh 'docker push trieuvu/nodejs'
                 }
             }
         }
